@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Solutions — instructor only, NOT distributed to students
+solutions/
+**/solutions/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Data files (auto-downloaded by first notebook cell)
+**/data/wolof.txt
+**/data/wolof_cc100.txt.xz
+**/data/tinyshakespeare.txt
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb
+*.synctex.gz
