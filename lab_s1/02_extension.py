@@ -220,7 +220,7 @@ print(model.generate(seed_long, char_to_idx, idx_to_char, max_new_tokens=600, te
 # | dimension                  | LSTM | TinyAttn |
 # |----------------------------|------|----------|
 # | local fluency              | ?    | ?        |
-# | speaker name memory        | ?    | ?        |
+# | recent context access      | ?    | ?        |
 # | repetition after 200 chars | ?    | ?        |
 # | sentence completion        | ?    | ?        |
 #
@@ -231,5 +231,5 @@ print(model.generate(seed_long, char_to_idx, idx_to_char, max_new_tokens=600, te
 #
 # A single attention layer (no LSTM cell, no recurrence) trained on the same
 # corpus already shows different failure modes: less local fluency at the
-# character level, but better recovery of the speaker context across long spans.
-# That is the exact intuition Session 2 generalizes into the Transformer.
+# character level, but more direct access to recent context inside the 128-char
+# window. That is the exact intuition Session 2 generalizes into the Transformer.
