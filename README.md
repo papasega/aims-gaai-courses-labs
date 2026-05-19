@@ -1,7 +1,8 @@
 # AIMS Applied GenAI — Lab S1 Repository
 
 **Course:** Applied Generative and Agentic AI (30h)
-**Instructor:** Dr. Papa-Séga WADE — Orange Innovation / AIMS Senegal
+
+**Instructor:** Dr. Papa-Séga WADE 
 
 This GitHub Classroom repository contains the Session 1 lab for Module 0:
 **From Char-LSTM to Attention**. The lab is self-contained and uses a Wolof
@@ -23,7 +24,7 @@ concrete before introducing attention.
 ```bash
 # 1. Accept the GitHub Classroom assignment link -> repo created for you
 # 2. Clone your personal repo
-git clone https://github.com/PSW-Generative-and-Agentic-AI-AIMS-classroom/lab-session-1-YOUR_USERNAME.git
+git clone https://github.com/Generative-and-Agentic-AI-AIMS-classroom/lab-session-1-YOUR_USERNAME.git
 cd lab-session-1-YOUR_USERNAME
 
 # 3. Create and activate a local environment
