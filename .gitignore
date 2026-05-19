@@ -2,10 +2,15 @@
 __pycache__/
 *.pyc
 *.pyo
+*.pyd
 .venv/
 venv/
 env/
+ENV/
 *.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
 # Solutions — instructor only, NOT distributed to students
 solutions/
@@ -13,16 +18,40 @@ solutions/
 
 # Jupyter checkpoints
 .ipynb_checkpoints/
+**/.ipynb_checkpoints/
 
 # Data files (auto-downloaded by first notebook cell)
 **/data/wolof.txt
 **/data/wolof_cc100.txt.xz
 **/data/tinyshakespeare.txt
+**/data/raw/
+**/data/processed/
 
-# Model checkpoints
+# Local model/download caches
+.cache/
+**/.cache/
+hf_cache/
+**/hf_cache/
+huggingface/
+**/huggingface/
+models/
+**/models/
+
+# Model checkpoints and training outputs
 *.pt
 *.pth
 *.ckpt
+*.safetensors
+checkpoints/
+**/checkpoints/
+outputs/
+**/outputs/
+runs/
+**/runs/
+wandb/
+**/wandb/
+lightning_logs/
+**/lightning_logs/
 
 # macOS
 .DS_Store
@@ -37,3 +66,8 @@ solutions/
 *.toc
 *.vrb
 *.synctex.gz
+texput.log
+
+# Editors
+.vscode/settings.json
+.idea/
