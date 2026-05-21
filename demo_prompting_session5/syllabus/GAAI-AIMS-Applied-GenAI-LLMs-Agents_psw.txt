@@ -1,0 +1,79 @@
+GAAI-AIMS Applied Generative and Agentic AI - Syllabus Text Cache
+
+Course: Applied Generative and Agentic AI
+Institution: AIMS Senegal
+Instructor: Dr. Papa-Séga WADE
+Total duration: 30 hours
+
+Course objective
+The course gives students practical foundations in generative AI, large language models, retrieval-augmented generation, lightweight fine-tuning, LLM agents, evaluation, and responsible deployment. The goal is to move students from conceptual understanding to building working GenAI systems.
+
+Learning outcomes
+By the end of the course, students should be able to:
+- explain the path from neurons to attention and Transformers;
+- understand what LLMs are and how tokenization, pretraining, instruction tuning, alignment, and inference work;
+- choose open or closed models using model cards, cost, latency, context window, quantization, and license constraints;
+- write structured prompts for reliable and reproducible outputs;
+- build a simple RAG pipeline over course or domain documents;
+- perform lightweight fine-tuning using LoRA or QLoRA when behavior must be adapted;
+- evaluate LLM pipelines using task metrics and LLM-as-a-judge rubrics;
+- build simple LLM agents with tools, memory, and workflows;
+- identify hallucinations, prompt injection risks, bias, safety issues, and guardrails;
+- deliver a final GenAI project with a working demo, evaluation, and repository.
+
+Module 0 - Foundations: From Neurons to Transformers
+Session 1 introduces neurons, MLPs, CNNs, RNNs, LSTMs, and the motivation for attention.
+Session 2 focuses on attention and Transformer architecture. Students compare MLP, CNN, LSTM, and MiniViT ideas on MNIST or related demos. The goal is to understand why attention and Transformers became central in modern AI.
+
+Module 1 - Understanding LLMs
+Session 3 covers the LLM pipeline: data, tokenization, pretraining, instruction tuning, alignment, inference, and model cards. Students explore Hugging Face Hub, multilingual tokenization, and the cost of tokens across languages.
+Session 4 covers open models, model selection, quantization, reasoning models, speech AI, and frugal AI in African contexts. Students learn to reason about model size, memory, latency, quality, and deployment constraints.
+
+Module 2 - Using and Adapting an LLM
+Session 5 covers prompt engineering and context management. Students learn zero-shot prompting, few-shot prompting, role prompting, output constraints, chain-of-thought, self-consistency, context windows, lost-in-the-middle, and when prompting is not enough.
+Session 6 covers Retrieval-Augmented Generation. RAG retrieves relevant documents, inserts them into context, and asks the LLM to answer using the retrieved evidence. RAG is appropriate when the model needs external or updated knowledge.
+Session 7 covers lightweight fine-tuning with LoRA and QLoRA. Fine-tuning is appropriate when the system needs persistent behavior, domain style, task format, or language adaptation that prompting alone cannot guarantee.
+Session 8 covers evaluation of LLM systems and project launch. Evaluation includes exact match, F1, BLEU, ROUGE, perplexity, LLM-as-a-judge, groundedness, refusal behavior, and project success criteria.
+
+Prompting versus RAG versus fine-tuning
+Prompting changes the instruction given to the model. It is cheap, fast, and should be tried first.
+RAG changes the information available to the model by retrieving external context. It is best when the model lacks factual or updated knowledge.
+Fine-tuning changes model behavior through training data. It is useful for persistent style, domain behavior, low-resource language adaptation, or repeated task format.
+
+Low-resource language adaptation
+For a low-resource language such as Wolof, the recommended strategy is not always immediate fine-tuning. First define the task: translation, question answering, tutoring, speech, summarization, or domain assistance. Then collect clean data, evaluate tokenization behavior, test prompting and RAG, and only fine-tune if the system needs persistent linguistic or stylistic behavior. LoRA or QLoRA is preferred when compute is limited. Evaluation should include native speaker review, cultural appropriateness, task accuracy, hallucination checks, and cost.
+
+Module 3 - LLM Agents and Autonomous Systems
+Session 9 introduces LLM agents. A chatbot only answers. An agent can reason, call tools, observe results, and continue. Students learn the ReAct loop and function calling.
+Session 10 covers memory, workflows, LangGraph, and protocol awareness. Memory helps an assistant remember useful context. A graph turns a loop into a more controlled system.
+Session 11 covers multi-agent patterns and project progress. Multi-agent systems are useful only when one agent is doing several jobs badly. Patterns include orchestrator, pipeline, debate, and hierarchy.
+
+Module 4 - Evaluation, Security, and Project
+Session 12 covers hallucinations, prompt injection, jailbreaks, bias, governance, model cards, carbon cost, and responsible AI. A model without guardrails is a liability, not a product.
+Session 13 and later project sessions focus on supervised project work, guardrails, evaluation, peer review, and final demos.
+
+Labs
+Students complete practical labs across the course:
+- character LSTM and attention observations;
+- MNIST model evolution and MiniViT;
+- Hugging Face Hub and multilingual tokenization;
+- quantized models and reasoning prompts;
+- prompting techniques on AIMS tasks;
+- mini-RAG from scratch;
+- LoRA or QLoRA fine-tuning;
+- evaluation with LLM-as-a-judge;
+- LangChain or LangGraph agents;
+- memory and workflows;
+- attack and defense workshop.
+
+Assessment structure
+The course includes graded labs, a midterm quiz or MCQ, and a final project. The final project should include a working repository, README, demo, evaluation, guardrails, and discussion of limitations.
+
+Engineering principles
+Use the simplest reliable method first.
+Measure quality, latency, cost, and safety.
+Keep prompts, model choices, parameters, and evaluation results reproducible.
+Use RAG for missing knowledge.
+Use fine-tuning for persistent behavior.
+Use guardrails for safety.
+Use evaluation before claiming success.
